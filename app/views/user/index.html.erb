@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 style="text-align: left;margin-left: 10px;"> PhotoSite User List</h1>
+<h3 style="text-align: left; margin-left: 10px"> There are <%= @users_all.count%> Users</h3>
+<table class="table table-hover table-bordered">
+  <tbody>
+    <tr style="text-align: right">
+      <th style="text-align: center"> User Id</th>
+      <th style="text-align: center"> First Name</th>
+      <th style="text-align: center"> Last Name </th>
+    </tr>
+    <% @users_all.all.each do |user| %>
+    <tr>
+      <td style="text-align: center"> <%= link_to user.id, {:action=> 'index', :controller => 'photo', :id=> user.id } %></td>
+      <td style="text-align: center"> <%= user.first_name%></td>
+      <td style="text-align: center"> <%= user.last_name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</body>
+</html>

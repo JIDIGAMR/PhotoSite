@@ -1,0 +1,16 @@
+<h1>Photos Page </h1>
+<% for photo in @photos%>
+    <%= image_tag(photo.file_name)%>
+    <br/>
+    <br/>
+    <strong style="margin-left: 10px">Photo Created on: </strong> <%= photo.date_time %>
+    <br/> <br/>
+    <% for comment in photo.comments %>
+        <strong style="margin-left: 10px">Comment Created on: </strong> <%= comment.date_time %>
+        <br/> <br/>
+        <strong style="margin-left: 10px">Comment Description: </strong> <%= comment.comment_text %>
+        <br/> <br/>
+        <strong style="margin-left: 10px">Comment By: </strong> <%= link_to comment.user.first_name + " "+ comment.user.last_name , {:action=> 'index', :controller => 'photo', :id=> comment.user.id }  %>
+        <br/> <br/>
+    <%end%>
+<%end%>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a93d4d91-3955-40d2-bd05-6475560c4d30" name="Amazon EC2" url="http://ubuntu@ec2-52-53-247-254.us-west-1.compute.amazonaws.com">
+        <fileTransfer host="ubuntu@ec2-52-53-247-254.us-west-1.compute.amazonaws.com" port="22" privateKey="C:\Users\JIDIGAMR\Desktop\jidigam_CS6320_amiUbuntu_csueb.ppk" accessType="SFTP" username="ubuntu" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
